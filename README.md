@@ -1,48 +1,56 @@
-DependencyInjectionContainer
-Welcome to the DependencyInjectionContainer project, designed to facilitate the management of dependencies in a .NET Console application, ensuring loose coupling and adherence to SOLID principles. This container automates the creation and injection of dependencies, allowing for more maintainable, testable, and scalable code.
+# PhotonContainer DI
 
-Problem Statement
-The aim is to develop a DI container that reduces the complexity of managing dependencies manually, promotes decoupling, and adheres to SOLID principles, thereby enhancing the maintainability, testability, and scalability of applications.
+Welcome to the PhotonContainer DI project, a simple yet effective Dependency Injection (DI) container designed to facilitate the decoupling of components in .NET applications.
 
-Project Goals
-Key Features
-Inversion of Control (IoC):
+## Problem Statement
 
-Inverts the control of object creation from the application to the container, promoting the Dependency Inversion Principle (DIP). High-level modules depend on abstractions rather than low-level modules.
-Automatic Dependency Resolution:
+The goal is to develop a DI container that allows for easy registration and resolution of services, promoting loose coupling and enhancing testability in your applications.
 
-Resolves dependencies automatically by analyzing constructor parameters, promoting the Single Responsibility Principle (SRP). Classes manage only their behavior and not their dependencies.
-Support for Constructor Injection:
+## Project Goals
 
-Ensures dependencies are provided at the time of object creation, aligning with the Open/Closed Principle (OCP). Classes remain open for extension but closed for modification.
-Singleton and Transient Lifetimes:
+### Initial Phase
 
-Supports both singleton and transient lifetimes, offering flexibility in dependency management. Singletons ensure a single instance throughout the application's lifetime, while transient dependencies create new instances per request.
-Ease of Use:
+- **Register Services**: Enable the registration of services with their implementations.
+- **Resolve Services**: Automatically resolve and inject dependencies where needed.
 
-Provides a simple and intuitive API for easy registration and resolution of dependencies, enabling developers to focus on business logic rather than boilerplate code.
-Example Usage
-Here’s how to effectively utilize the DependencyInjectionContainer to manage dependencies:
+### Advanced Features
 
-csharp
-Copy code
-// Registering services
-var container = new DIContainer();
-container.RegisterSingleton<IService, ServiceImplementation>();
-container.RegisterTransient<IRepository, RepositoryImplementation>();
+- **Automatic Resolution**: Automatically resolve nested dependencies.
+- **Modularity**: Ensure the DI container is modular and maintainable.
 
-// Resolving and using services
-var service = container.Resolve<IService>();
-service.Execute();
-Benefits
-Decoupling:
+## Example Usage
 
-Reduces coupling between classes, promoting a more modular and flexible architecture.
-Maintainability:
+Here's how to effectively utilize the PhotonContainer to manage dependency injection:
 
-Achieves separation of concerns, making the codebase easier to maintain and evolve. Changes to dependencies do not require changes to the dependent classes.
-Testability:
+```csharp
+using PhotonContainer.Business.DIContainers;
+using PhotonContainer.Business.Interfaces;
+using PhotonContainer.Business.ReverseStrings;
+using PhotonContainer.Business.TestStrings;
 
-Facilitates unit testing by allowing easy injection of mock dependencies, ensuring classes can be tested in isolation.
-Conclusion
-Our custom DI container for .NET Console applications is a powerful tool that promotes SOLID principles, enhances code quality, and simplifies the management of dependencies. By leveraging this container, developers can build more robust, maintainable, and scalable applications.
+namespace PhotonContainer
+{
+    public class Program
+    {
+        static IContainers container = new PhotonDIContainer();
+
+        public static void Main(string[] args)
+        {
+            DIServices();
+
+            IStringReversals reversalService = container.Resolve<IStringReversals>();
+
+            Console.WriteLine($"Reversed: {reversalService.ReverseString()}");
+
+            Console.ReadLine();
+        }
+
+        private static void DIServices()
+        {
+            container.Register<IStringReversals, PhotonReversal>();
+            container.Register<ITestStrings, TestStringOne>();
+
+            container.Resolve<ITestStrings>();
+        }
+    }
+}
