@@ -1,0 +1,11 @@
+C:\PhotonContainerRepo\PhotonContainer.Business\bin\Debug\net6.0\PhotonContainer.Business.deps.json
+C:\PhotonContainerRepo\PhotonContainer.Business\bin\Debug\net6.0\PhotonContainer.Business.dll
+C:\PhotonContainerRepo\PhotonContainer.Business\bin\Debug\net6.0\PhotonContainer.Business.pdb
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.AssemblyInfoInputs.cache
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.AssemblyInfo.cs
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.csproj.CoreCompileInputs.cache
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.dll
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\refint\PhotonContainer.Business.dll
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\PhotonContainer.Business.pdb
+C:\PhotonContainerRepo\PhotonContainer.Business\obj\Debug\net6.0\ref\PhotonContainer.Business.dll

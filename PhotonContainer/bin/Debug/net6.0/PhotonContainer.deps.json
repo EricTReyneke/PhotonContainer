@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PhotonContainer/1.0.0": {
+        "dependencies": {
+          "PhotonContainer.Business": "1.0.0"
+        },
+        "runtime": {
+          "PhotonContainer.dll": {}
+        }
+      },
+      "PhotonContainer.Business/1.0.0": {
+        "runtime": {
+          "PhotonContainer.Business.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PhotonContainer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PhotonContainer.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
