@@ -1,4 +1,0 @@
-C:\PhotonContainerRepo\PhotonContainer.Business.Data\obj\Debug\net6.0\PhotonContainer.Business.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\PhotonContainerRepo\PhotonContainer.Business.Data\obj\Debug\net6.0\PhotonContainer.Business.Data.AssemblyInfoInputs.cache
-C:\PhotonContainerRepo\PhotonContainer.Business.Data\obj\Debug\net6.0\PhotonContainer.Business.Data.AssemblyInfo.cs
-C:\PhotonContainerRepo\PhotonContainer.Business.Data\obj\Debug\net6.0\PhotonContainer.Business.Data.csproj.CoreCompileInputs.cache
